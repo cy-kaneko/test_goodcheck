@@ -17,8 +17,6 @@ export default class Button extends LitElement {
   @property({ type: Boolean }) disabled = false;
   @property({ type: Boolean }) visible = true;
 
-  private test?: (params?: MouseEvent) => void;
-
   private _onClick?: (params?: MouseEvent) => void;
 
   constructor(props?: ButtonProps) {
