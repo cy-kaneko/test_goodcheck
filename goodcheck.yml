@@ -4,9 +4,6 @@ rules:
       regexp: private [^_]
     message: Please include "_" in the prefix of private variables and functions.
     glob: "**/index.ts"
-    pass: |
-      private _getItemTemplate() {
-      }
 
   - id: type  
     pattern:
@@ -14,14 +11,16 @@ rules:
       case_sensitive: false
     message: |
       value inside type of typescript, @property, value inside constructor will be sorted according to alphabet order by type.
-    glob: "**/index.ts"
-    pass: |
+
       // alphabet order
       type DropdownProps = {
         error?: string;
         label?: string;
         value?: string;
       };
+
       @property({ type: String }) error = "";
       @property({ type: String }) label = "";
       @property({ type: String }) value = "";
+    glob: "**/index.ts"
+
