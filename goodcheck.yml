@@ -1,0 +1,5 @@
+id: _private
+pattern:
+  regexp: private [^_]
+  glob: "**/index.ts"
+message: Please include "_" in the prefix of private variables and functions.
