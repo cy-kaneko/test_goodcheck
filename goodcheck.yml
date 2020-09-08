@@ -1,5 +1,10 @@
-id: _private
-pattern:
-  regexp: private [^_]
-  glob: "**/index.ts"
-message: Please include "_" in the prefix of private variables and functions.
+rules:
+  - id: private
+    pattern:
+      - regexp: private [^_]
+    message: Please include "_" in the prefix of private variables and functions.
+    glob: "**/index.ts"
+    pass: |
+      private _getItemTemplate() {
+      }
+
