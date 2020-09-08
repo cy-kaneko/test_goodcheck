@@ -1,0 +1,34 @@
+rules:
+  - id: private
+    pattern:
+      regexp: private [^_]
+    message: Please include "_" in the prefix of private variables and functions.
+    glob: "**/index.ts"
+
+  - id: type.property
+    pattern:
+      regexp: ^type\s
+    message: |
+      value inside type of typescript, @property, value inside constructor will be sorted according to alphabet order by type.
+
+      // alphabet order
+      type DropdownProps = {
+        error?: string;
+        label?: string;
+        value?: string;
+      };
+
+      @property({ type: String }) error = "";
+      @property({ type: String }) label = "";
+      @property({ type: String }) value = "";
+    glob: "**/index.ts"
+
+  - id: style.tag
+    not:
+      pattern: <style>
+    message: |
+      Let’s implement style by describing style tag inside render.
+      With lit-element, there is a way to write by using styles property,
+      but this is the property that you can’t use without using shadowDOM internally,
+      so please describe style tag inside HTML to perform the styling.
+    glob: "**/index.ts"
