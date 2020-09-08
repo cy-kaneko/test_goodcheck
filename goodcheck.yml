@@ -5,7 +5,7 @@ rules:
     message: Please include "_" in the prefix of private variables and functions.
     glob: "**/index.ts"
 
-  - id: type  
+  - id: type.property
     pattern:
       regexp: ^type\s
     message: |
