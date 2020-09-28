@@ -122,6 +122,7 @@ export default class Button extends LitElement {
           background-color: #e74c3c;
           box-shadow: 1px 1px 1px #fff inset;
           color: #fff;
+          background-image:url(../img.jpg);
         }
         .kuc-button__button--alert:hover,
         .kuc-button__button--alert:focus,
@@ -143,7 +144,7 @@ export default class Button extends LitElement {
           cursor: pointer;
         }
         .kuc-button__button:disabled {
-          border: 1px solid #e3e7e8;
+          border: 1px solid #e3e7E8;
           background-color: #dbdcdd;
           box-shadow: none;
           color: #bababa;
